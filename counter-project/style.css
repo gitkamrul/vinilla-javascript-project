@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Teko:wght@400;500;600;700&display=swap');
+
+
+body {
+   /* 
+   font-family: 'Pacifico', cursive;
+    */
+   font-family: 'Teko', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    background: rgb(238,174,202);
+    background: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    color: #333333;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+button {
+    outline: none;
+}
+
+button:focus {
+    outline: none;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+::selection {
+    color: white;
+    background: #ff7675;
+}
+
+::-webkit-selection {
+    color: white;
+    background: #ff7675;
+}
+
+::-moz-selection {
+    color: white;
+    background: #ff7675;
+}
+
+.scrolltotop {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px 20px 0 0;
+    background: rgba(0, 0, 0, .5);
+    display: block;
+    text-align: center;
+    padding-top: 8px;
+    font-size: 22px;
+    color: #ffffff;
+    position: fixed;
+    right: 5px;
+    bottom: 5px;
+    display: none;
+    transition: 0.2s all ease;
+    -webkit-transition: 0.2s all ease;
+    -moz-transition: 0.2s all ease;
+}
+
+
+/* counter-content-css-start  */
+.counter-content {
+   width: 100%;
+   background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+   border-radius: 10px;
+   padding: 50px 20px;
+   margin-top: 100px;
+   text-align: center;
+
+   box-shadow: -webkit-box-shadow: 0px 0px 0px 8px #000000, 0px 0px 0px 16px #4B4C4B, 0px 0px 0px 24px #828482, 0px 0px 0px 31px #B2B5B2, 0px 0px 0px 39px #DADDDA, -50px -50px 0px -30px rgba(0,0,0,0);
+   box-shadow: 0px 0px 0px 8px #000000, 0px 0px 0px 16px #4B4C4B, 0px 0px 0px 24px #828482, 0px 0px 0px 31px #B2B5B2, 0px 0px 0px 39px #DADDDA, -50px -50px 0px -30px rgba(0,0,0,0);
+}
+
+.counter-content  .header h3 {
+   font-weight: 700;
+   font-size: 32px;
+   color: #FFF;
+   text-transform: uppercase;
+   font-family: 'Pacifico', cursive;
+}
+
+.counter-text .count {
+   font-size: 100px;
+   font-weight: 700;
+   color: rgb(63,94,251);
+   
+}
+
+.couonter-btn  .counter{
+   display: inline-block;
+   color: #FFF;
+   font-weight:400;
+   outline: none;
+   background: #333;
+   border: none;
+   border-radius: 4px;
+   padding: 5px 30px;
+   font-size: 30px;
+   margin: 0 10px;
+}

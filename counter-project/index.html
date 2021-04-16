@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+
+
+   <div class="counter">
+      <div class="container">
+         <div class="counter-wrapper">
+            <div class="row">
+               <div class="col-lg-6  m-auto">
+                  <div class="counter-content">
+                     <div class="header">
+                        <h3>Counter</h3>
+                     </div>
+                     <div class="counter-text">
+                        <h2 class="count" id="count">0</h2>
+                        <div class="couonter-btn">
+                           <button class="counter  low">Lower Count</button>
+                           <button class="counter  reset">Reset</button>
+                           <button class="counter  add">Add Count</button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" ></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" ></script>
+
+    <script>
+       let btn = document.querySelectorAll(".counter");
+       let count = 0;
+
+       btn.forEach(function(btn){
+
+         btn.addEventListener("click", function(){
+          let countValue = document.getElementById("count");
+
+          if(btn.classList.contains("low")){
+            count --;
+          }else if(btn.classList.contains("add")){
+             count ++;
+          }else if(btn.classList.contains("reset")){
+             count = 0;
+          }
+          
+          countValue.textContent = count;
+
+          if (count > 0) {
+            countValue.style.color = "green";
+          }else if(count <0){
+            countValue.style.color = "red";
+          }else{
+            countValue.style.color = "rgb(63,94,251)";
+          }
+
+       })
+
+       });
+
+
+
+
+
+      
+    </script>
+</html>
