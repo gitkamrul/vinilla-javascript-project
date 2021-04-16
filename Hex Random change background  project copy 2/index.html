@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+   <title>Title</title>
+   <!-- Required meta tags -->
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+   <link rel="stylesheet" href="style.css">
+
+   <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<body>
+
+   <div class="message-area">
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-6  m-auto">
+               <div class="message-box">
+                  <form action="#"   id="form">
+                     <p>A message You would like to Pass</p>
+                     <div class="form-group">
+                        <input type="text" id="msg" class="form-control" name="" id="" aria-describedby="helpId"
+                           placeholder="Enter Your text">
+                        <small id="message" class="form-text text-muted">text </small>
+                     </div>
+                     <div class="form-group">
+                        <button id="sub" class="sub-btn" type="submit">Submit</button>
+                     </div>
+
+                     <div class="content">
+                        <h4>Last Message Delivered</h4>
+                        <h3 id="value" class="text">Enter value</h3>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <!-- Optional JavaScript -->
+   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+   <script>
+      let form = document.querySelector("#form");
+
+      form.addEventListener("submit", function (e) {
+         let err = document.querySelector("#message");
+         let msg = document.querySelector("#msg");
+         let value = document.querySelector("#value");
+         e.preventDefault();
+
+         if(msg.value == ""){
+            err.classList.add("active");
+            err.textContent = "Please Enter Some Value ";
+            setTimeout(() => {
+               err.classList.remove("active");
+            }, 5000);
+         }else{
+            value.style.color = "#333333"
+            value.textContent = ` ${msg.value}`;
+         }
+
+
+
+
+
+
+
+
+      });
+
+
+
+
+
+   </script>
+</body>
+
+</html>

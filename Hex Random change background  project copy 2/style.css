@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Six+Caps&display=swap');
+
+body {
+    font-family: 'Lato', sans-serif;
+    /* font-family: 'Six Caps', sans-serif;sans-serif; */
+    font-size: 16px;
+    font-weight: 400;
+    background: #4EAE3E;
+    color: #333333;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+button {
+    outline: none;
+}
+
+button:focus {
+    outline: none;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+::selection {
+    color: white;
+    background: #ff7675;
+}
+
+::-webkit-selection {
+    color: white;
+    background: #ff7675;
+}
+
+::-moz-selection {
+    color: white;
+    background: #ff7675;
+}
+
+.scrolltotop {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px 20px 0 0;
+    background: rgba(0, 0, 0, .5);
+    display: block;
+    text-align: center;
+    padding-top: 8px;
+    font-size: 22px;
+    color: #ffffff;
+    position: fixed;
+    right: 5px;
+    bottom: 5px;
+    display: none;
+    transition: 0.2s all ease;
+    -webkit-transition: 0.2s all ease;
+    -moz-transition: 0.2s all ease;
+}
+
+.scrolltotop:hover {
+    background: #000;
+    color: #fff;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, .5);
+    -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, .5);
+    -moz-box-shadow: 0px 0px 5px rgba(0, 0, 0, .5);
+}
+
+
+.message-box {
+   
+   width: 100%;
+   height: 500px;
+   margin-top: 100px;
+   background: #4D95E0;
+   border-radius: 10px;
+   padding: 30px 20px;
+   text-align: center;
+}
+
+.message-box  p{
+    font-size: 24px;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: #fff;
+    text-align: center;
+}
+
+
+.message-box input:placeholder{
+    opacity: 1;
+
+}
+
+#message {
+    color: #fff !important;
+    font-weight: 500;
+    font-size: 18px;
+    text-align: left;
+    display: none;
+    font-weight: 600;
+}
+
+#message.active {
+    display: block;
+}
+
+.sub-btn {
+    text-align: center;
+    display: inline-block;
+    color: #FFF;
+    background: #4EAE3E;
+    font-size: 18px;
+    outline:none;
+    border: none;
+    text-transform: uppercase;
+    padding: 10px 30px;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.sub-btn:hover {
+    opacity: 0.8;
+}
+
+.message-box .content h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #f0f0f0;
+}
+
+.message-box .content  h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+}
+
+
