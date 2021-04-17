@@ -17,7 +17,7 @@
          <div class="slider-wrapper">
             <div class="row">
                <div class="col-lg-6  m-auto">
-                  <div class="image-slider">
+                  <div id="slider"class="image-slider">
                      <button  class="left-btn  slide ">Left</button>
                      <button class="right-btn slide">Right</button>
                   </div>
@@ -40,36 +40,33 @@
 
 
          let pictures = [ '0', '1', '2','3', '4' ];
-
+         let counter = 0;
          let btn = document.querySelectorAll(".slide");
+         let slider = document.querySelector("#slider");
 
 
          btn.forEach(function(btn){
             btn.addEventListener("click",function(e){
 
-               if(btn.classList.contains(""));
-
-
-
-
+               if(btn.classList.contains("left-btn")){
+                  counter --;
+                  if (counter < 0) {
+                     counter = pictures.length -1
+                     
+                  }
+                  slider.style.backgroundImage =`url(img/${pictures[counter]}.jpeg)`
+                  
+               }
+               if (btn.classList.contains("right-btn")) {
+                  counter ++;
+                  if (counter>pictures.length -1 ) {
+                     counter = 0;
+                  }
+                  slider.style.backgroundImage =`url(img/${pictures[counter]}.jpeg)`
+               }
             })
          })
          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
       })();
 
 
