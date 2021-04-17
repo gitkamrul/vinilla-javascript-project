@@ -1,15 +1,17 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <title>Title</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
+
+<head>
+   <title>Title</title>
+   <!-- Required meta tags -->
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+   <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
 
 
    <div class="slider">
@@ -17,8 +19,8 @@
          <div class="slider-wrapper">
             <div class="row">
                <div class="col-lg-6  m-auto">
-                  <div id="slider"class="image-slider">
-                     <button  class="left-btn  slide ">Left</button>
+                  <div id="slider" class="image-slider">
+                     <button class="left-btn  slide ">Left</button>
                      <button class="right-btn slide">Right</button>
                   </div>
                </div>
@@ -27,83 +29,15 @@
       </div>
    </div>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" ></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" ></script>
+   <!-- Optional JavaScript -->
+   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+   <script src="main.js"></script>
+   
 
 
-    <script>
+</body>
 
-      (function(){
-
-
-         let pictures = [ '0', '1', '2','3', '4' ];
-         let counter = 0;
-         let btn = document.querySelectorAll(".slide");
-         let slider = document.querySelector("#slider");
-
-
-         btn.forEach(function(btn){
-            btn.addEventListener("click",function(e){
-
-               if(btn.classList.contains("left-btn")){
-                  counter --;
-                  if (counter < 0) {
-                     counter = pictures.length -1
-                     
-                  }
-                  slider.style.backgroundImage =`url(img/${pictures[counter]}.jpeg)`
-                  
-               }
-               if (btn.classList.contains("right-btn")) {
-                  counter ++;
-                  if (counter>pictures.length -1 ) {
-                     counter = 0;
-                  }
-                  slider.style.backgroundImage =`url(img/${pictures[counter]}.jpeg)`
-               }
-            })
-         })
-         
-      })();
-
-
-
-
-
-
-
-    </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-    </script>
-  </body>
 </html>
