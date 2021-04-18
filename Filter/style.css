@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+body {
+   /* 
+   font-family: 'Kaushan Script', cursive; 
+   */
+
+   font-family: 'Poppins', sans-serif;
+   font-size: 16px;
+   font-weight: 400;
+   background: #4EAE3E;
+   color: #333333;
+}
+
+a:hover {
+   text-decoration: none;
+}
+
+button {
+   outline: none;
+}
+
+button:focus {
+   outline: none;
+}
+
+ul {
+   list-style-type: none;
+   padding: 0;
+   margin: 0;
+}
+
+::selection {
+   color: white;
+   background: #ff7675;
+}
+
+::-webkit-selection {
+   color: white;
+   background: #ff7675;
+}
+
+::-moz-selection {
+   color: white;
+   background: #ff7675;
+}
+
+.scrolltotop {
+   width: 40px;
+   height: 40px;
+   border-radius: 20px 20px 0 0;
+   background: rgba(0, 0, 0, .5);
+   display: block;
+   text-align: center;
+   padding-top: 8px;
+   font-size: 22px;
+   color: #ffffff;
+   position: fixed;
+   right: 5px;
+   bottom: 5px;
+   display: none;
+   transition: 0.2s all ease;
+   -webkit-transition: 0.2s all ease;
+   -moz-transition: 0.2s all ease;
+}
+
+.scrolltotop:hover {
+   background: #000;
+   color: #fff;
+   box-shadow: 0px 0px 5px rgba(0, 0, 0, .5);
+   -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, .5);
+   -moz-box-shadow: 0px 0px 5px rgba(0, 0, 0, .5);
+}
+
+
+/* filter-area-start  */
+
+.filter-area {
+   padding: 50px 0;
+}
+
+.all-button {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.all-button .filter-btn {
+   outline: none;
+   border: none;
+   color: #FFF;
+   background: #222;
+   border-radius: 5px;
+   display: inline-block;
+   padding: 5px 20px;
+   text-transform: uppercase;
+   font-size: 15px;
+   font-weight: 700;
+   transition: all 0.2s ease;
+   -moz-transition: all 0.2s ease;
+   -webkit-transition: all 0.2s ease;
+}
+
+.all-button .filter-btn:hover {
+   opacity: 0.8;
+}
+
+
+.search-box {
+   margin-top: 20px;
+}
+
+.search-box input {
+   outline: none;
+
+}
+
+.store-item-content {
+
+   background: #FFF;
+   border-radius: 10px;
+   overflow: hidden;
+   margin-bottom: 30px;
+}
+
+.store-item .img{
+   overflow: hidden;
+   cursor: pointer;
+}
+
+.store-item .img img {
+   display: inline-block;
+   width: 100%;
+   transform: scale(1);
+   -moz-transition: all 0.2s ease;
+   -webkit-transition: all 0.2s ease;
+   transition: all 0.2s ease;
+   height: 250px;
+}
+
+.store-item .img img:hover{
+   transform: scale(1.1);
+}
+
+.store-item .content {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 15px 20px;
+   font-family: 'Kaushan Script', cursive;
+}
+
+.store-item .content h5 {
+   font-size: 24px;
+}
+
+.store-items {
+   padding:20px 0;
+}
+
+
+
+/* modal css-start  */
+
+.image-modal {
+   position:fixed;
+   left:50%;
+   top: 50%;
+   bottom: 0;
+   z-index: 999;
+   overflow:hidden;
+   transform: translate(-50%,-50%);
+   background: rgba(0, 0, 0, .5);
+   width: 100%;
+   height: 100vh;
+   display: none;
+}
+
+.modal-item {
+   width: 100vh;
+   background: red;
+   margin: auto;
+   height: 70vh;      position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%,-50%);
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+
+.modal-item .arrow  span {
+   font-size: 30px;
+   color: #000;
+   cursor:pointer;
+}
+
+.btn-left {
+	position: absolute;
+	left: 20px;
+	top: 50%;
+	transform: translate(-50%,-50%);
+}
+.btn-right {
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translate(-50%,-50%);
+}
+
+
+.show{
+   display: block;
+}
+
+
+.btn-close {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.btn-close span {
+   font-size: 30px;
+   color:red;
+   cursor: pointer;
+}
+
+/* filter-area-end   */

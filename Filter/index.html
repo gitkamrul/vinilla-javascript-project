@@ -6,39 +6,237 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"  />
+
+
+  <!-- fontawesome -->
+  
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 
-  <div class="filter-area">
+  <div class="filter-area">   
     <div class="container">
-      <div class="row">
-        <div class="col-lg-6 m-auto">
-          <div class="tab-header">
-             <div class="all-button d-flex">
-              <button class="filter-btn"> All</button>
-              <button class="filter-btn"> One</button>
-              <button class="filter-btn"> Two</button>
-              <button class="filter-btn"> Three</button>
-              <button class="filter-btn"> Four</button>
-              <button class="filter-btn"> Five</button>
-             </div>
+      <div class="filter-header">
+        <div class="row">
+          <div class="col-lg-6 m-auto">
+            <div class="tab-header">
+               <div class="all-button">
+                <button class="filter-btn"  data-filter="all"> All</button>
+                <button class="filter-btn" data-filter="sweet"> sweet </button>
+                <button class="filter-btn" data-filter="cupcake"> cupcake </button>
+                <button class="filter-btn" data-filter="cake"> cake </button>
+                <button class="filter-btn" data-filter="dougnut"> dougnut </button>
+               </div>
+               <div class="search-box">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><span><i class="fas fa-search"></i></span></span>
+                  </div> 
+                  <input type="text"  id="search-box" class="form-control" placeholder="Search something">
+                </div>
+               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="store-item-contents" id="show-items"  >
+        <div class="row">
+          <div class="col-lg-4 store-item cupcake" data-item="cupcake">
+            <div class="store-item-content "   >
+                <div class="img">
+                  <img id="store-img" src="img/1.jpeg" alt="Image not found">
+                </div>
+                <div class="content">
+                  <h5 id="store-item-content-name">sweet item</h5>
+                  <h5>$<strong id="store-item-content-price" class="font-weight-bold">5</strong></h5>
+                </div>
+            </div>
+          </div>        
+          <div class="col-lg-4 store-item sweet" data-item="sweet"> 
+            <div class="store-item-content">
+                <div class="img">
+                  <img id="store-img" src="img/2.jpeg" alt="Image not found">
+                </div>
+                <div class="content">
+                  <h5 id="store-item-content-name">sweet item</h5>
+                  <h5>$<strong id="store-item-content-price" class="font-weight-bold">5</strong></h5>
+                </div>
+            </div>
+          </div>    
+          <div class="col-lg-4 store-item sweet"  data-item="sweet">
+            <div class="store-item-content  ">
+                <div class="img">
+                  <img id="store-img" src="img/3.jpeg" alt="Image not found">
+                </div>
+                <div class="content">
+                  <h5 id="store-item-content-name">sweet item</h5>
+                  <h5>$<strong id="store-item-content-price" class="font-weight-bold">5</strong></h5>
+                </div>
+            </div>
+          </div>
+          <div class="col-lg-4 store-item cupcake"  data-item="cupcake">
+            <div class="store-item-content "  >
+                <div class="img">
+                  <img id="store-img" src="img/4.jpeg" alt="Image not found">
+                </div>
+                <div class="content">
+                  <h5 id="store-item-content-name">cupcake item</h5>
+                  <h5>$<strong id="store-item-content-price" class="font-weight-bold">5</strong></h5>
+                </div>
+            </div>
+          </div>
+          <div class="col-lg-4 store-item cupcake"  data-item="cupcake">
+            <div class="store-item-content "  >
+                <div class="img">
+                  <img id="store-img" src="img/5.jpeg" alt="Image not found">
+                </div>
+                <div class="content">
+                  <h5 id="store-item-content-name">cupcake item</h5>
+                  <h5>$<strong id="store-item-content-price" class="font-weight-bold">5</strong></h5>
+                </div>
+            </div>
+          </div>
+          <div class="col-lg-4 store-item cupcake"  data-item="cupcake">
+            <div class="store-item-content "  >
+                <div class="img">
+                  <img id="store-img" src="img/6.jpeg" alt="Image not found">
+                </div>
+                <div class="content">
+                  <h5 id="store-item-content-name">cupcake item</h5>
+                  <h5>$<strong id="store-item-content-price" class="font-weight-bold">5</strong></h5>
+                </div>
+            </div>
+          </div>
+          <div class="col-lg-4 store-item cupcake" data-item="cupcake">
+            <div class="store-item-content ">
+                <div class="img">
+                  <img id="store-img" src="img/7.jpeg" alt="Image not found">
+                </div>
+                <div class="content">
+                  <h5 id="store-item-content-name">cupcake item</h5>
+                  <h5>$<strong id="store-item-content-price" class="font-weight-bold">5</strong></h5>
+                </div>
+            </div>
+          </div>
+          <div class="col-lg-4 store-item cake"  data-item="cake">
+            <div class="store-item-content "  >
+                <div class="img">
+                  <img id="store-img" src="img/8.jpeg" alt="Image not found">
+                </div>
+                <div class="content">
+                  <h5 id="store-item-content-name">cake item</h5>
+                  <h5>$<strong id="store-item-content-price" class="font-weight-bold">5</strong></h5>
+                </div>
+            </div>
+          </div>
+          <div class="col-lg-4 store-item cupcake"  data-item="cupcake">
+            <div class="store-item-content "  >
+                <div class="img">
+                  <img id="store-img" src="img/9.jpeg" alt="Image not found">
+                </div>
+                <div class="content">
+                  <h5 id="store-item-content-name">cupcake item</h5>
+                  <h5>$<strong id="store-item-content-price" class="font-weight-bold">5</strong></h5>
+                </div>
+            </div>
+          </div>
+          <div class="col-lg-4 store-item cake" data-item="cake">
+            <div class="store-item-content "   >
+                <div class="img">
+                  <img id="store-img" src="img/10.jpeg" alt="Image not found">
+                </div>
+                <div class="content">
+                  <h5 id="store-item-content-name">cake item</h5>
+                  <h5>$<strong id="store-item-content-price" class="font-weight-bold">5</strong></h5>
+                </div>
+            </div>
+          </div>
+          <div class="col-lg-4 store-item dougnut" data-item="dougnut">
+            <div class="store-item-content "   >
+                <div class="img">
+                  <img id="store-img" src="img/11.jpeg" alt="Image not found">
+                </div>
+                <div class="content">
+                  <h5 id="store-item-content-name">dougnut item</h5>
+                  <h5>$<strong id="store-item-content-price" class="font-weight-bold">5</strong></h5>
+                </div>
+            </div>
+          </div>
+          <div class="col-lg-4 store-item cake"  data-item="cake" >
+            <div class="store-item-content " >
+                <div class="img">
+                  <img id="store-img" src="img/12.jpeg" alt="Image not found">
+                </div>
+                <div class="content">
+                  <h5 id="store-item-content-name">cake item</h5>
+                  <h5>$<strong id="store-item-content-price" class="font-weight-bold">5</strong></h5>
+                </div>
+            </div>
+          </div>
+          <div class="col-lg-4 store-item cupcake" data-item="cupcake" >
+            <div class="store-item-content "  >
+                <div class="img">
+                  <img id="store-img" src="img/13.jpeg" alt="Image not found">
+                </div>
+                <div class="content">
+                  <h5 id="store-item-content-name">cupcake item</h5>
+                  <h5>$<strong id="store-item-content-price" class="font-weight-bold">5</strong></h5>
+                </div>
+            </div>
+          </div>
+          <div class="col-lg-4 store-item dougnut" data-item="dougnut">
+            <div class="store-item-content " >
+                <div class="img">
+                  <img id="store-img" src="img/14.jpeg" alt="Image not found">
+                </div>
+                <div class="content">
+                  <h5 id="store-item-content-name">dougnut item</h5>
+                  <h5>$<strong id="store-item-content-price" class="font-weight-bold">5</strong></h5>
+                </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-4 store-item dougnut"  data-item="dougnut">
+            <div class="store-item-content">
+                <div class="img">
+                  <img id="store-img" src="img/15.jpeg" alt="Image not found">
+                </div>
+                <div class="content">
+                  <h5 id="store-item-content-name">dougnut item</h5>
+                  <h5>$<strong id="store-item-content-price" class="font-weight-bold">5</strong></h5>
+                </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-
   <!-- Optional JavaScript -->
+
+  <div class="image-modal">
+    <div class="contianer">
+      <div class="modal-item"  id="modal-item">
+        <div class="btn-left arrow " id="left"><span><i class="fas fa-chevron-left"></i></span></div>
+        <div class="btn-right arrow" id="right"><span><i class="fas fa-chevron-right"></i></span></div>
+        <div class="btn-close"  id="close"><span><i class="fas fa-times-circle"></i></span></div>
+      </div>
+    </div>
+  </div>
+
+
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <script src="main.js"></script>
+
+
 </body>
 
 </html>
