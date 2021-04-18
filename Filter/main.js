@@ -23,8 +23,7 @@
     })();
   
   
-    // search element function start 
-  
+    // search element function start   
     (function(){
       let searchobx = document.getElementById("search-box");
       let items = document.querySelectorAll(".store-item");
@@ -102,32 +101,6 @@
       })
 
     })()
-
-
-  
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
    }
    modal();
