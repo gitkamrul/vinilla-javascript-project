@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+   <title>Title</title>
+   <!-- Required meta tags -->
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+   <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+   <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+   <div class="calculator-area">
+      <div class="ocntainer">
+         <div class="row">
+            <div class="col-lg-3 m-auto">
+               <div class="calculator">
+                  <div class="screen">
+                     <input  id="screen" type="text" value="0">
+                  </div>
+                  <div class="btn btns">
+                     <button data-num="7" class="btn cal">7</button>
+                     <button data-num="8" class="btn cal">8</button>
+                     <button data-num="9" class="btn cal">9</button>
+                     <button class="btn   clear">c</button>
+                     <button data-num="4" class="btn cal">4</button>
+                     <button data-num="5" class="btn cal">5</button>
+                     <button data-num="6" class="btn cal">6</button>
+                     <button data-num="/" class="btn cal">/</button>
+                     <button data-num="3" class="btn cal">3</button>
+                     <button data-num="4" class="btn cal">4</button>
+                     <button data-num="5" class="btn cal">5</button>
+                     <button data-num="*" class="btn cal">*</button>
+                     <button data-num="1" class="btn cal">1</button>
+                     <button data-num="2" class="btn cal">2</button>
+                     <button data-num="3" class="btn cal">3</button>
+                     <button data-num="+" class="btn cal">+</button>
+                     <button data-num="0" class="btn  equal">=</button>
+                     <button data-num="0" class="btn cal">-</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <script>
+      (function () {
+         let btn = document.querySelectorAll(".cal");
+         let screen = document.getElementById("screen");
+         let clear = document.querySelector(".clear");
+
+          let pscreen = screen.parentElement;
+          let span = document.createElement("span");
+          span.textContent = "please Enter a valid Number ";
+          span.style.color ="red";
+          span.style.marginTop = "5px";
+          span.style.fontSize = "20px";
+          span.style.display = "none";
+          pscreen.appendChild(span)
+
+
+
+
+         let equal = document.querySelector(".equal");
+         
+        
+        btn.forEach((btn)=>{
+           btn.addEventListener("click",(e)=>{
+             let value =  e.target.dataset.num;
+             screen.value +=value;
+           })
+           
+        });
+
+        clear.addEventListener("click",()=>{
+         screen.value = "0";
+        });
+
+
+
+
+
+
+
+
+        equal.addEventListener("click",function(){
+
+         if(screen.value === "0" || screen.value ==""){
+            span.style.display= "block"
+            setTimeout(() => {
+               span.style.display= "none"
+            }, 2000);
+           
+         }else{
+            let answer = eval(screen.value);
+           screen.value = answer;
+         }
+           
+        })
+
+      })()
+   </script>
+
+
+   <!-- Optional JavaScript -->
+   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+   <script src="main.js"></script>
+</body>
+
+</html>

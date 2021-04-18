@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Teko:wght@400;500;600;700&display=swap');
+
+
+body {
+   /* 
+   font-family: 'Pacifico', cursive;
+    */
+   font-family: 'Teko', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    background: rgb(238,174,202);
+    background: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    color: #333333;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+button {
+    outline: none;
+}
+
+button:focus {
+    outline: none;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+::selection {
+    color: white;
+    background: #ff7675;
+}
+
+::-webkit-selection {
+    color: white;
+    background: #ff7675;
+}
+
+::-moz-selection {
+    color: white;
+    background: #ff7675;
+}
+
+.scrolltotop {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px 20px 0 0;
+    background: rgba(0, 0, 0, .5);
+    display: block;
+    text-align: center;
+    padding-top: 8px;
+    font-size: 22px;
+    color: #ffffff;
+    position: fixed;
+    right: 5px;
+    bottom: 5px;
+    display: none;
+    transition: 0.2s all ease;
+    -webkit-transition: 0.2s all ease;
+    -moz-transition: 0.2s all ease;
+}
+
+.calculator-area {
+	overflow: hidden;
+   margin-top: 100px;
+}
+
+
+.calculator {
+   width: 100%;
+   background: #484848;
+   padding: 30px 25px;
+   overflow: hidden;
+   border-radius: 10px;
+
+
+}
+
+.calculator  input{
+   display:inline-block;
+   width:100%;
+   border:none;
+   background: #CDDECC;
+   border-radius: 5px;
+   padding: 5px 15px;
+   outline: none;
+   font-size: 30px;
+   text-align: right;
+}
+
+
+.calculator  .btns {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   flex-wrap: wrap;
+   margin-top: 10px;
+}
+.calculator  .btns  .btn {
+   display: inline-block;
+   background: #FFF;
+   color: #242526;
+   font-size: 24px;
+   outline: none;
+   border: none;
+   border-radius: 2px;
+   padding: 5px 5px;
+   width: 22%;
+   margin-bottom: 10px;
+   border-radius: 4px;
+   box-shadow: 5px 7px 9px 20px rgba(70, 69, 69, 0.3);
+}
+
+.calculator  .btns  .btn.equal{
+   width: 70%;
+   background: #4A9840;
+   color: #FFF;
+   font-size: 30px;
+   padding: 0 0;
+}
+
+.calculator  .btns  .btn.clear {
+   background: #BB1C09;
+   color: #FFF;
+   
+}
